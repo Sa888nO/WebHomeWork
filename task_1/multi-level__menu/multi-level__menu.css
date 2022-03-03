@@ -1,82 +1,37 @@
-body {
-  margin: 0;
-  padding: 0;
-}
-nav {
-  background-color: rgb(211, 247, 144);
-  width: 605px;
-  display: flex;
-  justify-content: space-around;
-}
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-nav ul li {
-  width: 300px;
-  text-align: center;
-}
-nav ul:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-nav a {
-  text-decoration: none;
-  display: block;
-}
-.topmenu > li {
-  float: left;
-  position: relative;
-}
-.topmenu > li:first-child {
-  border-left: 0;
-}
-.topmenu > li > a {
-  padding: 20px 30px;
+.wrapper {
   font-size: 30px;
-  text-transform: uppercase;
-  color: #fefdfd;
-  letter-spacing: 2px;
-}
-.topmenu > li > a.active,
-.submenu a:hover {
-  background-color: rgb(211, 247, 144);
-  color: rgb(24, 23, 23);
-}
-.topmenu .fa,
-.submenu .fa {
-  margin-left: 5px;
-  color: inherit;
-}
-.submenu {
-  position: absolute;
-  z-index: 5;
-  min-width: 200px;
-  background: white;
-  border-top: 1px solid #cbcbcc;
-  border-left: 1px solid #cbcbcc;
-  border-right: 1px solid #cbcbcc;
-  visibility: hidden;
-  opacity: 0;
-  transform-origin: 0% 0%;
-  transform: rotateX(-90deg);
-}
-.submenu li {
-  position: relative;
-}
-.submenu li a {
-  color: #282828;
-  padding: 10px 20px;
-  font-size: 25px;
-  border-bottom: 1px solid #cbcbcc;
+  width: 350px;
+  border: 2px solid black;
+  font-weight: bold;
 }
 
-nav li:hover > .submenu {
-  transform: rotateX(0deg);
-  visibility: visible;
-  opacity: 1;
+ul {
+  display: block;
+  width: 250px;
+  list-style: none;
+  transition: 0.3s linear;
+}
+li > ul {
+  list-style: none;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+li > ul > li :hover {
+  background-color: black;
+  color: white;
+}
+.subUl {
+  font-size: 20px;
+}
+.subUl :hover {
+  background-color: black;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
 }
 
 .link {
